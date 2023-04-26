@@ -26,8 +26,7 @@ class HuffmanNode {
   function printCode(root, s) {
     if (
       root.left == null &&
-      root.right == null &&
-      root.c.toLowerCase() != root.c.toUpperCase()
+      root.right == null
     ) {
       console.log(root.c + ":" + s + "<br>");
       fmap[root.c] = s;
@@ -46,6 +45,7 @@ class HuffmanNode {
     const freqarr = charFrequency(input);
     var x = input;
     x = Array.from(new Set(x.split(""))).toString();
+    console.log(x);
     sss = input;
     input = "";
     for (var i = 0; i < x.length; i++) if (x[i] != ",") input += x[i];
