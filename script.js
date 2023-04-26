@@ -1,127 +1,104 @@
-// Node class to represent the Huffman tree node
-class Node {
-  constructor(char, freq, left, right) {
-    this.char = char;
-    this.freq = freq;
-    this.left = left;
-    this.right = right;
-  }
-}
-
-// Function to calculate the frequency of characters in a string
-function calculateFrequency(str) {
-  const freqMap = new Map();
-  for (let i = 0; i < str.length; i++) {
-    const char = str[i];
-    if (freqMap.has(char)) {
-      freqMap.set(char, freqMap.get(char) + 1);
-    } else {
-      freqMap.set(char, 1);
+class HuffmanNode {
+    constructor() {
+      this.data = 0;
+      this.c = "";
+      this.left = this.right = null;
     }
   }
-  return freqMap;
-}
-
-function charFrequency(str) {
-    const freq = {};
   
-    for (let i = 0; i < str.length; i++) {
-      const char = str[i];
-      freq[char] = (freq[char] || 0) + 1;
+  const fmap = new Map();
+  function charFrequency(string) {
+    var freq = {};
+    for (var i = 0; i < string.length; i++) {
+      var character = string.charAt(i);
+      if (freq[character]) {
+        freq[character]++;
+      } else {
+        freq[character] = 1;
+      }
+    }
+    for (var i = 0; i < string.length; i++) {
+      console.log(freq[string[i]]);
     }
   
-    const freqArr = [];
-  
-    for (const char in freq) {
-      freqArr.push({ char: char, freq: freq[char] });
+    return freq;
+  }
+  function printCode(root, s) {
+    if (
+      root.left == null &&
+      root.right == null &&
+      root.c.toLowerCase() != root.c.toUpperCase()
+    ) {
+      console.log(root.c + ":" + s + "<br>");
+      fmap[root.c] = s;
+      console.log(fmap);
+      document.getElementById("string3").innerHTML += `${root.c} : ${s} \n`;
+      return;
     }
-  
-    return freqArr;
+    printCode(root.left, s + "0");
+    printCode(root.right, s + "1");
   }
   
-  
-
-
-// Function to build the Huffman tree
-function buildHuffmanTree(freqMap) {
-  const pq = [...freqMap.entries()].map(
-    ([char, freq]) => new Node(char, freq, null, null)
-  );
-  while (pq.length > 1) {
-    pq.sort((a, b) => a.freq - b.freq);
-    const left = pq.shift();
-    const right = pq.shift();
-    const parent = new Node(null, left.freq + right.freq, left, right);
-    pq.push(parent);
-  }
-  return pq[0];
-}
-
-// Function to generate Huffman codes for characters
-function generateHuffmanCodes(root) {
-  const codes = new Map();
-  function traverse(node, code) {
-    if (node.char !== null) {
-      codes.set(node.char, code);
-    } else {
-      traverse(node.left, code + "0");
-      traverse(node.right, code + "1");
-    }
-  }
-  traverse(root, "");
-  return codes;
-}
-
-// Function to encode a string using Huffman encoding
-function huffmanEncode(str) {
-  const freqMap = calculateFrequency(str);
-  const huffmanTree = buildHuffmanTree(freqMap);
-  const huffmanCodes = generateHuffmanCodes(huffmanTree);
-  let encoded = "";
-  for (let i = 0; i < str.length; i++) {
-    encoded += huffmanCodes.get(str[i]);
-  }
-  return encoded;
-}
-
-// Function to decode a Huffman-encoded string
-function huffmanDecode(encoded, huffmanTree) {
-  let decoded = "";
-  let node = huffmanTree;
-  for (let i = 0; i < encoded.length; i++) {
-    if (encoded[i] === "0") {
-      node = node.left;
-    } else {
-      node = node.right;
-    }
-    if (node.char !== null) {
-      decoded += node.char;
-      node = huffmanTree;
-    }
-  }
-  return decoded;
-}
-
-// Example usage
-
-function display(e) {
+  function display(e) {
     e.preventDefault();
-  let input = document.getElementById("string1").value;
-//   document.getElementById("string2").innerHTML = input;
-  const encoded = huffmanEncode(input);
-  document.getElementById("string2").innerHTML=('Encoded:', encoded);
-
+    let input = document.getElementById("string1").value;
+    n = input.length;
+    const freqarr = charFrequency(input);
+    var x = input;
+    x = Array.from(new Set(x.split(""))).toString();
+    sss = input;
+    input = "";
+    for (var i = 0; i < x.length; i++) if (x[i] != ",") input += x[i];
+    console.log(input);
+    n = input.length;
+    let q = [];
   
-  const freqArr = charFrequency(input);
+    for (let i = 0; i < n; i++) {
+      let hn = new HuffmanNode();
   
-  const freqTable = freqArr
-    .map(({ char, freq }) => `${char} - ${freq} \n`)
-    .join("");
+      hn.c = input[i];
+      hn.data = freqarr[input[i]];
   
-  const div = document.getElementById("string3");
-  div.innerHTML = `${freqTable}`;
-
-
-}
-//   const decoded = huffmanDecode(encoded, buildHuffmanTree(calculateFrequency(input)));
-//   console.log('Decoded:', decoded);
+      hn.left = null;
+      hn.right = null;
+  
+      q.push(hn);
+    }
+  
+    let root = null;
+    q.sort(function (a, b) {
+      return a.data - b.data;
+    });
+    while (q.length > 1) {
+      let x = q[0];
+      q.shift();
+      let y = q[0];
+      q.shift();
+      let f = new HuffmanNode();
+      f.data = x.data + y.data;
+      f.c = "-";
+      f.left = x;
+      f.right = y;
+      root = f;
+      q.push(f);
+      q.sort(function (a, b) {
+        return a.data - b.data;
+      });
+    }
+    printCode(root, "");
+    let ans = 0;
+    for(var j = 0; j<sss.length; j++)
+    {
+        document.getElementById("string2").innerHTML += fmap[sss[j]];
+        ans += fmap[sss[j]].length;
+    }
+    
+    for(var k = 0; k<input.length; k++)
+    {
+        document.getElementById("string4").innerHTML += `${input[k]} : ${freqarr[input[k]]}\n`;
+    }
+    document.getElementById("string5").innerHTML += ans;
+  }
+  
+  
+  
