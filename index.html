@@ -11,28 +11,38 @@
 
 <body class="page">
   <script src="script.js"></script>
-    <h1 class="heading">Huffman coding JS</h1>
+    <h1 class="heading">Huffman Encoding & Decoding</h1>
   
     <div class="form-wrap">
       <form class="form" id="encode">
         <textarea class="textarea " id="string1" placeholder="type anything to decode "></textarea>
         <button class="form__button" type="submit" onclick="display(event)">Encode</button>
       </form>
-      <form class="form" id="decode">
+      <form class="form" id="encode">
         <textarea class="textarea" id="string2"></textarea>
-        <button class="form__button" type="submit">Decode</button>
+        <button class="form__button" type="submit" onclick="copy()">Copy</button>
       </form>
-      <form class="form" id="decode">
+      <form class="form" id="encode">
         <textarea class="textarea" id="string3"></textarea>
         <!-- <button class="form__button" type="submit">Decode</button> -->
       </form>
-      <form class="form" id="decode">
+      <form class="form" id="encode">
         <textarea class="textarea" id="string4"></textarea>
         <!-- <button class="form__button" type="submit">Decode</button> -->
       </form>
-      <form class="form" id="decode">
+      <form class="form" id="encode">
         <textarea class="textarea" id="string5"></textarea>
         <!-- <button class="form__button" type="submit">Decode</button> -->
+      </form>
+    </div>
+
+    <div class="form-wrap2">
+      <form class="form" id="decode">
+        <textarea class="textarea " id="string6" placeholder="type anything to encode "></textarea>
+        <button class="form__button2" type="submit" onclick="display2(event)">Decode</button>
+      </form>
+      <form class="form" id="decode">
+        <textarea class="textarea" id="string7"></textarea>
       </form>
     </div>
 
