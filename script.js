@@ -22,6 +22,26 @@ function calculateFrequency(str) {
   return freqMap;
 }
 
+function charFrequency(str) {
+    const freq = {};
+  
+    for (let i = 0; i < str.length; i++) {
+      const char = str[i];
+      freq[char] = (freq[char] || 0) + 1;
+    }
+  
+    const freqArr = [];
+  
+    for (const char in freq) {
+      freqArr.push({ char: char, freq: freq[char] });
+    }
+  
+    return freqArr;
+  }
+  
+  
+
+
 // Function to build the Huffman tree
 function buildHuffmanTree(freqMap) {
   const pq = [...freqMap.entries()].map(
@@ -90,6 +110,18 @@ function display(e) {
 //   document.getElementById("string2").innerHTML = input;
   const encoded = huffmanEncode(input);
   document.getElementById("string2").innerHTML=('Encoded:', encoded);
+
+  
+  const freqArr = charFrequency(input);
+  
+  const freqTable = freqArr
+    .map(({ char, freq }) => `${char} - ${freq} \n`)
+    .join("");
+  
+  const div = document.getElementById("string3");
+  div.innerHTML = `${freqTable}`;
+
+
 }
 //   const decoded = huffmanDecode(encoded, buildHuffmanTree(calculateFrequency(input)));
 //   console.log('Decoded:', decoded);
