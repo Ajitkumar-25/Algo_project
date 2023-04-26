@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    
 </head>
 
 <body class="page">
+  <script src="script.js"></script>
     <h1 class="heading">Huffman coding JS</h1>
   
     <div class="form-wrap">
       <form class="form" id="encode">
-        <textarea class="textarea"></textarea>
-        <button class="form__button" type="submit">Encode</button>
+        <textarea class="textarea " id="string1" placeholder="type anything to decode "></textarea>
+        <button class="form__button" type="submit" onclick="display(event)">Encode</button>
       </form>
-  
       <form class="form" id="decode">
-        <textarea class="textarea"></textarea>
+        <textarea class="textarea" id="string2"></textarea>
         <button class="form__button" type="submit">Decode</button>
       </form>
     </div>
