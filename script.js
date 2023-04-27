@@ -94,7 +94,11 @@ function display(e) {
       freqarr[input[k]]
     }\n`;
   }
-  document.getElementById("string5").innerHTML += ans;
+  //code in 5th block
+ let len=input.length*8;
+  document.getElementById("string5").innerHTML = 
+    "Total space consumed before encoding : "+ len+"bits\n\n"
+    + "Total space consumed after encoding : "+ans+ "bits\n\n";
 }
 
 
@@ -112,7 +116,7 @@ function copy(e) {
   navigator.clipboard.writeText(copyText.value);
 
   // Alert the copied text
-  alert("Copied the text: " + copyText.value);
+  alert("The text have been copied to the clipboard. ");
 }
 
 // To map each character its huffman value
