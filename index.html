@@ -12,39 +12,55 @@
     
 </head>
 
-<body class="page">
-  <script src="script.js"></script>
-    <h1 class="heading">Huffman Encoding & Decoding</h1>
-  
-    <div class="form-wrap">
-      <form class="form" id="encode">
-        <textarea class="textarea " id="string1" placeholder="TYPE ANYTHING YOU WANTED TO ENCODE  "></textarea>
-        <button class="form__button" type="submit" onclick="display(event)">Encode</button>
-      </form>
-      <form class="form" id="encode">
-        <textarea class="textarea" id="string2" placeholder="YOU WILL SEE THE ENCODED TEXT HERE"></textarea>
-        <button class="form__button" type="submit" onclick="copy(event)">Copy</button>
-      </form>
-      <form class="form" id="encode">
-        <textarea class="textarea" id="string3" placeholder="YOU WILL SEE THE ENCODING OF EACH CHARECTER HERE"></textarea>
-      </form>
-      <form class="form" id="encode">
-        <textarea class="textarea" id="string4" placeholder="YOU WILL SE THE FREQUENCY OF EACH CHARECTER HERE"></textarea>
-      </form>
-      <form class="form" id="encode">
-        <textarea class="textarea" id="string5" placeholder="YOU WILL SEE THE SPACE REQUIRED FOR ENCODING (IN BITS) HERE"></textarea>
-      </form>
+<body>
+
+  <div class="maincontainer">
+    <div class="heading">
+        Huffman Encoding &#38 Decoding
     </div>
 
-    <div class="form-wrap2">
-      <form class="form" id="decode">
-        <textarea class="textarea " id="string6" placeholder="TYPE ANY ENCODED STRING HERE TO DECODE "></textarea>
-        <button class="form__button2" type="submit" onclick="display2(event)">Decode</button>
-      </form>
-      <form class="form" id="decode">
-        <textarea class="textarea" id="string7" placeholder="YOU WILL SEE THE DECODED STRING HERE "></textarea>
-      </form>
+    <div class="container">
+
+        <form class="item" id="encode">
+            <textarea placeholder="TYPE ANYTHING YOU WANTED TO ENCODE  " class="textarea" id="string1"></textarea>
+        </form>
+
+        <form class="item" id="encode">
+            <textarea placeholder="ENCODED TEXT" class="textarea" id="string2"></textarea>
+        </form>
+
+        <form class="item" id="encode">
+            <textarea placeholder="ENCODING OF EACH CHARACTER" class="textarea" id="string3"></textarea>
+        </form>
+
+        <form class="item" id="encode">
+            <textarea placeholder="FREQUENCY OF EACH CHARACTER" class="textarea" id="string4"></textarea>
+        </form>
+
+        <form class="item" id="encode">
+            <textarea placeholder="SPACE CONSUMED" class="textarea" id="string5"></textarea>
+        </form>
+
     </div>
 
-  </body>
+    <div class="bcontainer">
+        <button class="buttonit" type="submit" onclick="display(event)">Encode</button>
+        <button class="buttonit" type="submit" onclick="copy(event)">Copy</button>
+        <button class="buttonit" type="submit" onclick="display2(event)">Decode</button>
+    </div>
+
+    <div class="container2">
+        <form class="item" id="decode">
+            <textarea placeholder="TYPE ANY ENCODED STRING HERE TO DECODE" class="textarea2 " id="string6"></textarea>
+        </form>
+
+        <form class="item" id="decode">
+            <textarea placeholder="DECODED STRING" class="textarea2 " id="string7"></textarea>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
 </html>
