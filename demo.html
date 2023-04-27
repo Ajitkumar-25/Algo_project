@@ -6,31 +6,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
     <style>
         body {
-            background: #AAC8A7;
+            background: #9384D1;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
         .maincontainer {
-            background-color: #F6FFDE;
+            background-color: #ECC9EE;
             margin: 60px;
             height: 625px;
             border-radius: 8px;
-            box-shadow: 5px 10px 20px black;
+            box-shadow: 7px 12px 30px black;
 
         }
 
         .heading {
             text-align: center;
-            margin: 30px;
             font-size: xx-large;
+            font-family: 'Bruno Ace SC', cursive;
+            margin-top: 30px;
         }
 
         .bcontainer {
@@ -56,13 +61,37 @@
             flex-direction: row;
             gap: 25px;
             margin-top: 20px;
-
         }
-
+        
+        
         textarea {
             resize: none;
             width: 200px;
             height: 250px;
+            border-radius: 5px;
+            text-align: center;
+            color: black;
+            border: 3px solid #9384D1;
+            font-family: cursive;
+
+        }
+
+        .textarea:is(:focus,:valid){
+            padding-top: 40px;
+            box-sizing: border-box;
+        }
+
+        .textarea2:is(:focus,:valid){
+            padding-top: 60px;
+            box-sizing: border-box;
+        }
+
+        textarea::-webkit-scrollbar{
+            width: 0px;
+        }
+
+        textarea::placeholder{
+            color: black;
         }
 
         .container2 {
@@ -83,13 +112,11 @@
 
 
         .buttonit {
-            --c: #fff;
+            --c: #ECC9EE;
             width: 120px;
             height: 60px;
             font-size: 15px;
-            background: linear-gradient(90deg, #0000 33%, #fff5, #0000 67%) var(--_p, 100%)/300% no-repeat,
-                #AAC8A7;
-
+            background: linear-gradient(90deg, #0000 33%, #fff5, #0000 67%) var(--_p, 100%)/300% no-repeat, #9384D1;
             color: #0000;
             border: none;
             transform: perspective(500px) rotateY(calc(20deg*var(--_i, -1)));
@@ -119,6 +146,8 @@
             cursor: pointer;
             padding: .1em .3em;
         }
+
+
     </style>
 
     <div class="maincontainer">
@@ -128,48 +157,49 @@
 
         <div class="container">
 
-            <form class="item">
-                <textarea placeholder="anything"></textarea>
+            <form class="item" id="encode">
+                <textarea placeholder="TYPE ANYTHING YOU WANTED TO ENCODE  " class="textarea" id="string1"></textarea>
             </form>
 
-            <form class="item">
-                <textarea placeholder="anything 2"></textarea>
+            <form class="item" id="encode">
+                <textarea placeholder="ENCODED TEXT" class="textarea" id="string2"></textarea>
             </form>
 
-            <form class="item">
-                <textarea placeholder="anything 3"></textarea>
+            <form class="item" id="encode">
+                <textarea placeholder="ENCODING OF EACH CHARACTER" class="textarea" id="string3"></textarea>
             </form>
 
-            <form class="item">
-                <textarea placeholder="anything 4"></textarea>
+            <form class="item" id="encode">
+                <textarea placeholder="FREQUENCY OF EACH CHARACTER" class="textarea" id="string4"></textarea>
             </form>
 
-            <form class="item">
-                <textarea placeholder="anything 5"></textarea>
+            <form class="item" id="encode">
+                <textarea placeholder="SPACE CONSUMED" class="textarea" id="string5"></textarea>
             </form>
 
         </div>
 
         <div class="bcontainer">
-            <button class="buttonit">Encode</button>
-            <button class="buttonit">Copy</button>
-            <button class="buttonit">Decode</button>
+            <button class="buttonit" type="submit" onclick="display(event)">Encode</button>
+            <button class="buttonit" type="submit" onclick="copy(event)">Copy</button>
+            <button class="buttonit" type="submit" onclick="display2(event)">Decode</button>
         </div>
 
         <div class="container2">
-            <form class="item">
-                <textarea placeholder="anything 6"></textarea>
+            <form class="item" id="decode">
+                <textarea placeholder="TYPE ANY ENCODED STRING HERE TO DECODE" class="textarea2 " id="string6"></textarea>
             </form>
 
-            <form class="item">
-                <textarea placeholder="anything 7"></textarea>
+            <form class="item" id="decode">
+                <textarea placeholder="DECODED STRING" class="textarea2 " id="string7"></textarea>
             </form>
         </div>
     </div>
 
 
 
-
+ 
+    <script src="script.js"></script>
 </body>
 
 </html>

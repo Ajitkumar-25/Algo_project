@@ -101,8 +101,8 @@ function display(e) {
    let len=input.length*8;
    let save=len-ans;
   document.getElementById("string5").innerHTML = 
-    "Total space consumed before encoding : "+ len+"bits\n\n"
-    + "Total space consumed after encoding : "+ans+ "bits\n\n"
+    "Total space consumed before encoding : "+ len+" bits\n\n"
+    + "Total space consumed after encoding : "+ans+ " bits\n\n"
     + "Space saved : "+ save+" bits\n\n";
 }
 
