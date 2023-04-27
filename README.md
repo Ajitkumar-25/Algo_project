@@ -1,5 +1,5 @@
 # Huffman_encoding_decoding
-This is Huffman encoding and decoding algorithm built in python.
+This is Huffman encoding and decoding algorithm built in C++.
 
 Short description:
 A Huffman code is a type of optimal prefix code that is used for compressing data. The Huffman encoding and decoding schema is also lossless, meaning that when compressing the data to make it smaller, there is no loss of information.
@@ -27,7 +27,7 @@ Note: In the repository I've got 6 files:
 
 # Team Members
 
-| Name  | Entroolment No |
+| Enrollment No  | Name |
 | ------------- | ------------- |
 | 21103317  | Ajit Kumar  |
 | 21103315  | Monic Vyas  |
