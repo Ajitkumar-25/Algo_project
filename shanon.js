@@ -59,17 +59,14 @@ function shannonFano(input) {
     let input = document.getElementById("string1").value;
     const encoding=shannonFano(input);
     // console.log(encoding);
-    let output = document.getElementById("string3");
+    let output = document.getElementById("string2");
     for (let i = 0; i < encoding.length; i++) {
         output.innerHTML+=(encoding[i].char + " - " + encoding[i].code+"\n");
     } 
     
-
-
-
-
-
     
+
+    //frequency
     let freqoutput=document.getElementById("string4");
     
     for (let i = 0; i < freq.length; i++) { 
