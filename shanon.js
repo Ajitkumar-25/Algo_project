@@ -1,3 +1,7 @@
+
+function display(e)
+{ 
+  e.preventDefault();
 // Define a function to recursively perform the Shannon-Fano encoding
 function shannonFano(input) {
     // Base case: if the input is a single character, return it with a code of 0
@@ -11,7 +15,8 @@ function shannonFano(input) {
       const char = input[i];
       freq[char] = (freq[char] || 0) + 1;
     }
-    
+   
+   
     // Convert the frequency object into an array of {char, freq} objects
     const freqArray = Object.keys(freq).map(char => ({char, freq: freq[char]}));
     
@@ -50,12 +55,22 @@ function shannonFano(input) {
     return leftEncoding.concat(rightEncoding);
   }
   
+  function getFrequency(string) {
+    var freq = {};
+    for (var i=0; i<string.length;i++) {
+        var character = string.charAt(i);
+        if (freq[character]) {
+           freq[character]++;
+        } else {
+           freq[character] = 1;
+        }
+    }
 
+    return freq;
+}
  
 
-  function display(e)
-  { 
-    e.preventDefault();
+   
     let input = document.getElementById("string1").value;
     const encoding=shannonFano(input);
     // console.log(encoding);
@@ -64,13 +79,29 @@ function shannonFano(input) {
         output.innerHTML+=(encoding[i].char + " - " + encoding[i].code+"\n");
     } 
     
-    
-
     //frequency
-    let freqoutput=document.getElementById("string4");
+   
+    let freq = getFrequency(input);
+    // console.log(freq);
+    let output1 = document.getElementById("string3");
+
+    for (let i in freq) {
+        output1.innerHTML+=(i + " - " + freq[i]+"\n");
+
     
-    for (let i = 0; i < freq.length; i++) { 
-        freqoutput.innerHTML+=(freq[i] + " - " + freq[i]+"\n");
     }
+
+
+    //space calculation
+     let spaced=(input.length)*8;
+      let s=0;
+    for(let i=0;i<encoding.length;i++)
+    {   
+        s+=encoding[i].code.length*freq[encoding[i].char];
+    }
+      let ans=spaced-s;
+     let space=document.getElementById("string4");
+      space.innerHTML+="space before: " + spaced + "\n" + "space after" + s + "\n" + "space saved" +ans;  
+      // console.log(s);
       }
 
