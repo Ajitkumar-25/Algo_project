@@ -51,14 +51,29 @@ function shannonFano(input) {
   }
   
 
+ 
+
   function display(e)
   { 
     e.preventDefault();
     let input = document.getElementById("string1").value;
     const encoding=shannonFano(input);
     // console.log(encoding);
-    let output = document.getElementById("string2");
+    let output = document.getElementById("string3");
     for (let i = 0; i < encoding.length; i++) {
-        output.innerHTML+=(encoding[i].char + " is " + encoding[i].code+"\n");
-      };
+        output.innerHTML+=(encoding[i].char + " - " + encoding[i].code+"\n");
+    } 
+    
+
+
+
+
+
+    
+    let freqoutput=document.getElementById("string4");
+    
+    for (let i = 0; i < freq.length; i++) { 
+        freqoutput.innerHTML+=(freq[i] + " - " + freq[i]+"\n");
+    }
       }
+
