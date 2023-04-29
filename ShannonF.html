@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="ShannonF.css">
 
 </head>
@@ -47,8 +49,18 @@
 
         <div class="bcontainer">
             <button class="buttonit" type="submit" onclick="display(event)">Encode</button>
-            <!-- <button class="buttonit" type="submit" onclick="copy(event)">Copy</button> -->
-            <!-- <button class="buttonit" type="submit" onclick="display2(event)">Decode</button> -->
+            <button class="buttonit" type="submit" onclick="copy(event)">Copy</button>
+            <button class="buttonit" type="submit" onclick="display3(event)">Decode</button>
+        </div>
+
+        <div class="container2">
+            <form class="item" id="decode">
+                <textarea placeholder="TYPE ANY ENCODED STRING HERE TO DECODE" class="textarea2 stextarea" id="string5"></textarea>
+            </form>
+
+            <form class="item" id="decode">
+                <textarea placeholder="DECODED STRING" class="textarea2 stextarea5" id="string6"></textarea>
+            </form>
         </div>
 
         

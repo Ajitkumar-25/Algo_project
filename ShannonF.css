@@ -1,13 +1,13 @@
 
 body {
-    background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+    background: #9384D1;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 .maincontainer {
-    background-color: azure;
+    background-color: #ECC9EE;
     margin: 60px;
     height: 450px;
     border-radius: 8px;
@@ -21,9 +21,10 @@ body {
 
 .heading {
     text-align: center;
-    font-size: xxx-large;
+    font-size: 40px;
     font-family: 'Bruno Ace SC', cursive;
     margin-top: 30px;
+    padding-top: 20px;
 }
 
 .bcontainer {
@@ -61,7 +62,6 @@ textarea {
     color: black;
     border: 3px solid #9384D1;
     font-family: cursive;
-    box-shadow: 3px 3px 15px  black;
 
 }
 
@@ -114,6 +114,7 @@ textarea::placeholder{
         calc(var(--_i, -1)*-0.08em) .01em 2px #0004;
     outline-offset: .1em;
     transition: 0.3s;
+    color: #FC466B;
 }
 
 .buttonit:hover,
