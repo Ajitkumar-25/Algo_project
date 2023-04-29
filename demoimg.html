@@ -12,8 +12,7 @@
 </head>
 
 <body>
-    <script src="imgpros.js"></script>
-
+<script src="imgpros.js"></script>
     <style>
         body {
             margin: 0;
@@ -34,10 +33,10 @@
 
         .heading {
             text-align: center;
-            font-size: 40px;
+            font-size: 50px;
             margin-top: 30px;
-            padding-top: 20px;
-            margin-bottom: 20px;
+            padding-top: 60px;
+            margin-bottom: -20px;
             font-family: 'Sigmar', cursive;
 
         }
@@ -48,7 +47,7 @@
             align-items: center;
             flex-direction: column;
             row-gap: 40px;
-            margin-top: 40px;
+            margin-top: 100px;
         }
 
         button,
@@ -65,7 +64,10 @@
             transition: 0.2s;
             transition-timing-function: linear;
             font-family: 'Sigmar', cursive;
-
+            color: azure;
+            text-shadow: 2px 0 #000000, -2px 0 black, 0 2px black, 0 -2px black,
+             1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
+             margin-left: -30px;
         }
 
         button:active {
@@ -101,6 +103,45 @@
        
             text-align: center;
         }
+
+        .twobtn{
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            gap: 40px;
+        }
+
+        /*IMAGE*/
+        label {
+        cursor: pointer;
+        background-color:#3F5EFB;
+        font-family: 'Sigmar', cursive;
+        padding: 10px 20px;
+        color: azure;
+            font-size: 20px;
+            padding: 12px 25px;
+            border-radius: 0.7rem;  
+            border: 2px solid rgb(50, 50, 50);
+            border-bottom: 5px solid rgb(50, 50, 50);
+            box-shadow: 0px 1px 6px 0px rgb(158, 129, 254); 
+            text-shadow: 2px 0 #000000, -2px 0 black, 0 2px black, 0 -2px black,
+             1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
+            margin-left: -80px;
+            transform: translate(0, -3px);
+            transition: 0.2s;
+            transition-timing-function: linear;
+            
+       }
+       #img {
+        opacity: 0;
+        position: absolute;
+        z-index: -1;
+       }
+       label:active {
+            transform: translate(0, 0);
+            border-bottom: 2px solid rgb(50, 50, 50);
+        }
+
     </style>
 
 
@@ -109,14 +150,18 @@
             Image Compression
         </div>
         <div class="container">
-            
-            <form class="form form1" id="encode">
-                <input type="file"  id="img">
-            </form>
+
+        <div class="twobtn">
+            <form  class="form form1" id="encode">
+                <label for="img">Upload a file</label>
+                <input type="file" name="photo" id="img" />
+              </form>
+
 
             <button class="form__button" type="submit" onclick="display(event)">
                 Encode
             </button>
+        </div>
 
             <form class="form" id="encode">
                 <textarea readonly class="textarea2" id="string2"
