@@ -37,13 +37,15 @@ width: 100%;
     padding: 30px;
     justify-content: space-between;
     border-radius: 72px;
-    /* box-shadow: -1px -1px 7px black; */
+    box-shadow: -1px -1px 7px black; 
     /* background-color: #d7c16a; */
+    /* margin-left: 100px; */
+    /* gap: 100px; */
 }
 
-/* .third{
-    box-shadow: 1px 1px 7px black ;!important
-} */
+.third{
+    box-shadow: 1px 1px 7px black !important;
+}
 
 .htext2 {
     padding: 18px;
@@ -141,13 +143,10 @@ width: 100%;
 }
 
 .book2 {
-    background: #ebd66d;
-    !important
-}
+    background: #ebd66d !important;}
 
 .book3 {
-    background: #46FCD7;
-    !important
+    background: #46FCD7 !important;
 }
 
 
@@ -181,13 +180,11 @@ width: 100%;
 }
 
 .cover2 {
-    background: #2dec8d;
-    !important
+    background: #2dec8d !important;
 }
 
 .cover3 {
-    background-color: #92FE9D;
-    !important
+    background-color: #92FE9D !important;
 }
 
 .book:hover .cover {
