@@ -1,23 +1,27 @@
 
 body {
-    background: #9384D1;
+    background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 .maincontainer {
-    background-color: #ECC9EE;
+    background-color: azure;
     margin: 60px;
-    height: 625px;
+    height: 450px;
     border-radius: 8px;
     box-shadow: 7px 12px 30px black;
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 
 }
 
 .heading {
     text-align: center;
-    font-size: xx-large;
+    font-size: xxx-large;
     font-family: 'Bruno Ace SC', cursive;
     margin-top: 30px;
 }
@@ -57,6 +61,7 @@ textarea {
     color: black;
     border: 3px solid #9384D1;
     font-family: cursive;
+    box-shadow: 3px 3px 15px  black;
 
 }
 
@@ -90,17 +95,18 @@ textarea::placeholder{
     resize: none;
     width: 400px;
     height: 150px;
+    box-shadow: 3px 3px 15px  black;
 }
 
 
 
 
 .buttonit {
-    --c: #ECC9EE;
+    --c: azure;
     width: 120px;
     height: 60px;
     font-size: 15px;
-    background: linear-gradient(90deg, #0000 33%, #fff5, #0000 67%) var(--_p, 100%)/300% no-repeat, #9384D1;
+    background: linear-gradient(90deg, #0000 33%, #fff5, #0000 67%) var(--_p, 100%)/300% no-repeat,  #3F5EFB;
     color: #0000;
     border: none;
     transform: perspective(500px) rotateY(calc(20deg*var(--_i, -1)));

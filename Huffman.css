@@ -1,12 +1,12 @@
 body {
-    background: #9384D1;
+    background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 .maincontainer {
-    background-color: #ECC9EE;
+    background-color: azure;
     margin: 60px;
     height: 625px;
     border-radius: 8px;
@@ -57,14 +57,14 @@ textarea {
     color: black;
     border: none;
     font-size: 19px;
-    box-shadow: 2px 2px 10px  #9384D1;
+    box-shadow: 2px 2px 10px  black;
     
 }
 
 .stextarea5{
     font-family: 'Slabo 27px', serif;  
     font-weight:500; 
-    box-shadow: 3px 3px 15px  #9384D1;
+    box-shadow: 3px 3px 15px  black;
     
 }
 
@@ -112,11 +112,11 @@ textarea::placeholder{
 
 
 .buttonit {
-    --c: #ECC9EE;
+    --c: azure;
     width: 120px;
     height: 60px;
     font-size: 15px;
-    background: linear-gradient(90deg, #0000 33%, #fff5, #0000 67%) var(--_p, 100%)/300% no-repeat, #9384D1;
+    background: linear-gradient(90deg, #0000 33%, #fff5, #0000 67%) var(--_p, 100%)/300% no-repeat,#3f5efb;
     color: #0000;
     border: none;
     transform: perspective(500px) rotateY(calc(20deg*var(--_i, -1)));
