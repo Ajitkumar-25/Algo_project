@@ -1,5 +1,5 @@
 function display(e) {
-  e.preventDefault();
+  e.preventDefault()
 
   AmagiLoader.show();
   setTimeout(() => {
