@@ -8,7 +8,7 @@ body {
 
 .maincontainer {
     background-color: azure;
-    margin: 100px;
+    margin: 70px;
     margin-left: 120px;
     margin-right: 120px;
     height: 625px;
@@ -83,7 +83,8 @@ input {
     font-family: 'Instrument Serif', serif;
     padding-left: 20px;
     padding-top: 40px;
-
+    display:flex;
+    flex-direction:column;
 }
 
 textarea::placeholder {

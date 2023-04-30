@@ -105,17 +105,30 @@ function display(e) {
     // console.log("code",compressedPixels);
     // console.log("Compression Ratio:", imageData.data.length / compressedPixels.length);
 
-    
-    console.log(imageData);
+    console.log(imageData.data);
     console.log(compressedPixels);
 
-    
 
-    let save=imageData.data.length-compressedPixels.length;
-    document.getElementById("string2").innerHTML=
-    "Total space consumed before encoding : "+ imageData.data.length+" bits\n\n"
-    + "Total space consumed after encoding : "+compressedPixels.length+ " bits\n\n"
-    + "Space saved : "+ save+" bits\n\n"+"compression ratio :"+imageData.data.length / compressedPixels.length;
+    let save = imageData.data.length - compressedPixels.length;
+    document.getElementById("string2").innerHTML =
+      "Total space consumed before encoding : " +
+      imageData.data.length +
+      " bits\n\n" +
+      "Total space consumed after encoding : " +
+      compressedPixels.length +
+      " bits\n\n" +
+      "Space saved : " +
+      save +
+      " bits\n\n" +
+      "compression ratio :" +
+      imageData.data.length / compressedPixels.length;
+
+
+      // let initial = document.getElementById("string3");
+      // initial.innerHTML+= imageData.data;
+      // let final = document.getElementById("string4");
+      // final.innerHTML += compressedPixels;
+
   };
 
   var fileInput = document.getElementById("img");
