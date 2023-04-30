@@ -1,13 +1,13 @@
 
 body {
-    background: #9384D1;
+    background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 .maincontainer {
-    background-color: #ECC9EE;
+    background-color: azure;
     margin: 60px;
     height: 450px;
     border-radius: 8px;
@@ -23,8 +23,8 @@ body {
     text-align: center;
     font-size: 40px;
     font-family: 'Bruno Ace SC', cursive;
-    margin-top: 30px;
-    padding-top: 20px;
+    margin-top: 0px;
+    padding-top: -47px;
 }
 
 .bcontainer {
