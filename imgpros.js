@@ -1,5 +1,11 @@
 function display(e) {
   e.preventDefault();
+
+  AmagiLoader.show();
+  setTimeout(() => {
+    AmagiLoader.hide();
+  }, 3000);
+
   class HuffmanEncoder {
     constructor() {
       this.freq = {};
@@ -108,7 +114,6 @@ function display(e) {
     console.log(imageData.data);
     console.log(compressedPixels);
 
-
     let save = imageData.data.length - compressedPixels.length;
     document.getElementById("string2").innerHTML =
       "Total space consumed before encoding : " +
@@ -123,15 +128,14 @@ function display(e) {
       "compression ratio :" +
       imageData.data.length / compressedPixels.length;
 
-
-      // let initial = document.getElementById("string3");
-      // initial.innerHTML+= imageData.data;
-      // let final = document.getElementById("string4");
-      // final.innerHTML += compressedPixels;
-
+    // let initial = document.getElementById("string3");
+    // initial.innerHTML+= imageData.data;
+    // let final = document.getElementById("string4");
+    // final.innerHTML += compressedPixels;
   };
 
   var fileInput = document.getElementById("img");
   var filename = fileInput.files[0].name;
   img.src = filename;
 }
+

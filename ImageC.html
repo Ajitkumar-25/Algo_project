@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Sigmar&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="ImageC.css">
+    <script src="loader.js"></script>
 </head>
 
 <body>
@@ -32,19 +33,22 @@
                     <label for="img" tyle="cursor: pointer;">Upload a file</label>
                     
                 </form>
-                <button class="form__button" type="submit" onclick="display(event)">
+                <button class="form__button" type="submit" onclick="display(event)" >
+                    
                     Encode
                 </button>
                 
                 
             </div>
-          
+            <!-- <div class="loader" id="loader"">
+            </div> -->
+            
             <form class="form" id="encode">
                 <textarea readonly class="textarea2" id="string2"
                     placeholder="YOU WILL SEE THE ENCODED TEXT HERE"></textarea>
             </form>
         </div>
-        <img id="output" width="150" style="position: absolute; left: 210px ;bottom: 140px; border-radius: 4px; border: 1px solid black;"/>
+        <img id="output" width="150" style="position: absolute; left: 210px ;bottom: 180px; border-radius: 4px; border: 1px solid black;"/>
     </div>
     </div>
 

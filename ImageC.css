@@ -19,7 +19,7 @@ body {
 .heading {
     text-align: center;
     font-size: 50px;
-    margin-top: 30px;
+    margin-top: 20px;
     padding-top: 60px;
     margin-bottom: -20px;
     font-family: 'Sigmar', cursive;
@@ -28,11 +28,10 @@ body {
 
 .container {
     display: flex;
-
     align-items: center;
     flex-direction: column;
     row-gap: 40px;
-    margin-top: 100px;
+    margin-top: 60px;
 }
 
 button,
@@ -130,4 +129,22 @@ label {
 label:active {
     transform: translate(0, 0);
     border-bottom: 2px solid rgb(50, 50, 50);
+}
+
+.loader {
+    border: 16px solid #ffff; /* Light grey */
+    border-top: 16px solid black; /* Blue */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 2s linear infinite;
+ }
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.hide-loader{
+display:none;
 }
