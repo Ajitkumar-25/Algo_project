@@ -5,7 +5,7 @@ function shannonFano(input) {
     return [{ char: input, code: "0" }];
   }
 
-  // Calculate the frequency of each character in the inp
+  // Calculate the frequency of each character in the input
   const freq = {};
   for (let i = 0; i < input.length; i++) {
     const char = input[i];
