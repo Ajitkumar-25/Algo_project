@@ -25,7 +25,7 @@ Note: In the repository I've got 6 files:
 - In test_function I've provided some test cases to get a better grasph of what the entire program does
 - Further explanation is provided in code_explanation.txt
 
-# Team Member
+# Team Members
 
 | Enrollment No  | Name |
 | ------------- | ------------- |
