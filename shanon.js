@@ -146,10 +146,9 @@ function copy(e) {
 function shannonFanoDecode(encodedStr, encoding) {
   let decodedStr = "";
   let currentCode = "";
-
+// console.log(encodedStr);
   for (let i = 0; i < encodedStr.length; i++) {
     currentCode += encodedStr[i];
-
     for (let i = 0; i < encoding.length; i++) {
       if (encoding[i].code === currentCode) {
         decodedStr += encoding[i].char;
@@ -162,16 +161,17 @@ function shannonFanoDecode(encodedStr, encoding) {
   return decodedStr;
 }
 
+
 function display2(e) {
   //decoding the encoded string
   e.preventDefault();
   let input = document.getElementById("string1").value;
   let encoding = shannonFano(input);
-  let encodedStr = document.getElementById("string5").value;
+  let encodedStr = document.getElementById("string6").value;
   let result = shannonFanoDecode(encodedStr, encoding);
-  console.log(result);
-  let output = document.getElementById("string6");
-  output.innerHTML = result;
+  // console.log(result);
+  let output = document.getElementById("string7");
+  output.innerHTML += result;
 }
 
 //decoding the encoded string
