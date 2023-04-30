@@ -1,4 +1,3 @@
-
 body {
     background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
     margin: 0;
@@ -9,13 +8,9 @@ body {
 .maincontainer {
     background-color: azure;
     margin: 60px;
-    height: 450px;
+    height: 625px;
     border-radius: 8px;
     box-shadow: 7px 12px 30px black;
-    padding: 70px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
 
 }
 
@@ -23,8 +18,8 @@ body {
     text-align: center;
     font-size: 40px;
     font-family: 'Bruno Ace SC', cursive;
-    margin-top: 0px;
-    padding-top: -47px;
+    margin-top: 30px;
+    padding-top: 20px;
 }
 
 .bcontainer {
@@ -60,9 +55,25 @@ textarea {
     border-radius: 5px;
     text-align: center;
     color: black;
-    border: 3px solid #9384D1;
-    font-family: cursive;
+    border: none;
+    font-size: 19px;
+    box-shadow: 2px 2px 10px  black;
+    
+}
 
+.stextarea5{
+    font-family: 'Slabo 27px', serif;  
+    font-weight:500; 
+    box-shadow: 3px 3px 15px  black;
+    
+}
+
+.stextarea{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+textarea::placeholder{
+    padding: 10px;
+    padding-left: 20px;
 }
 
 .textarea:is(:focus,:valid){
@@ -71,7 +82,7 @@ textarea {
 }
 
 .textarea2:is(:focus,:valid){
-    padding-top: 60px;
+    padding-top: 40px;
     box-sizing: border-box;
 }
 
@@ -94,8 +105,7 @@ textarea::placeholder{
 .container2 textarea {
     resize: none;
     width: 400px;
-    height: 150px;
-    box-shadow: 3px 3px 15px  black;
+    height: 130px;
 }
 
 
@@ -106,7 +116,7 @@ textarea::placeholder{
     width: 120px;
     height: 60px;
     font-size: 15px;
-    background: linear-gradient(90deg, #0000 33%, #fff5, #0000 67%) var(--_p, 100%)/300% no-repeat,  #3F5EFB;
+    background: linear-gradient(90deg, #0000 33%, #fff5, #0000 67%) var(--_p, 100%)/300% no-repeat,#3f5efb;
     color: #0000;
     border: none;
     transform: perspective(500px) rotateY(calc(20deg*var(--_i, -1)));
@@ -114,7 +124,6 @@ textarea::placeholder{
         calc(var(--_i, -1)*-0.08em) .01em 2px #0004;
     outline-offset: .1em;
     transition: 0.3s;
-    color: #FC466B;
 }
 
 .buttonit:hover,

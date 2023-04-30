@@ -132,6 +132,9 @@ function display(e) {
     // initial.innerHTML+= imageData.data;
     // let final = document.getElementById("string4");
     // final.innerHTML += compressedPixels;
+
+    console.log(imageData.data);
+    console.log(compressedPixels);
   };
 
   var fileInput = document.getElementById("img");
