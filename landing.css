@@ -51,11 +51,13 @@ width: 100%;
     padding: 18px;
     font-size: xxx-large;
     margin-bottom: 10px;
+    font-family: impact;
 }
 
 .ptext2 {
     padding: 18px;
     font-size: x-large;
+    font-family: 'Bruno Ace SC', cursive;
 }
 
 .img2 {
