@@ -14,7 +14,7 @@ function display(e) {
       this.bits = 0;
     }
 
-    // Calculate frequency of each character in the 
+    // Calculate frequency of each character in the image
     calculateFrequency(imageData) {
       const pixels = imageData.data;
 
