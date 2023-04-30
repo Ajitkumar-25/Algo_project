@@ -140,5 +140,6 @@ function display(e) {
   var fileInput = document.getElementById("img");
   var filename = fileInput.files[0].name;
   img.src = filename;
-}
 
+
+}
