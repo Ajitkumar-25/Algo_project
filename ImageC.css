@@ -69,6 +69,7 @@ input {
     font-family: 'Instrument Serif', serif;
 }
 
+
 .textarea2 {
     resize: none;
     width: 600px;
@@ -126,6 +127,14 @@ label {
     z-index: -1;
 }
 
+.compo3{
+    display: flex;
+    flex-direction: row;
+    gap:55px;
+}
+#output{
+    border-radius: 5px;
+}
 label:active {
     transform: translate(0, 0);
     border-bottom: 2px solid rgb(50, 50, 50);

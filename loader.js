@@ -10,7 +10,7 @@ const AmagiLoader = {
             divContainer.style.width = '100%';
             divContainer.style.height = '100%';
             divContainer.style.zIndex = '9998';
-            divContainer.style.backgroundColor = 'rgba(250, 250, 250, 0.80)';
+            divContainer.style.backgroundColor = 'rgba(250, 250, 250,0.8)';
 
             var div = document.createElement('div');
             div.style.position = 'absolute';

@@ -1,34 +1,39 @@
-// Define a function to recursively perform the Shannon-Fano encoding
+
 function shannonFano(input) {
-  // Base case: if the input is a single character, return it with a code of 0
+ 
+ // if the input is a single character
+ 
   if (input.length === 1) {
     return [{ char: input, code: "0" }];
   }
 
-  // Calculate the frequency of each character in the input
+  // Calculate  frequency
+
   const freq = {};
   for (let i = 0; i < input.length; i++) {
     const char = input[i];
     freq[char] = (freq[char] || 0) + 1;
   }
 
-  // Convert the frequency object into an array of {char, freq} objects
+  //  frequency object into an array of {char, freq} objects
+
   const freqArray = Object.keys(freq).map((char) => ({
     char,
     freq: freq[char],
   }));
 
-  // Sort the frequency array in descending order by frequency
+  // Sort the frequency array in 
   freqArray.sort((a, b) => b.freq - a.freq);
 
-  // Calculate the cumulative frequency of the array
+  //  cumulative frequency of the array
+
   let cumulativeFreq = 0;
   for (let i = 0; i < freqArray.length; i++) {
     cumulativeFreq += freqArray[i].freq;
     freqArray[i].cumulativeFreq = cumulativeFreq;
   }
 
-  // Divide the frequency array into two halves based on the cumulative frequency
+  // Divide the frequency array into two halves 
   const midpoint = cumulativeFreq / 2;
   let leftSum = 0;
   let i;
@@ -41,13 +46,13 @@ function shannonFano(input) {
   const leftArray = freqArray.slice(0, i + 1);
   const rightArray = freqArray.slice(i + 1);
 
-  // Recursively encode the left and right halves of the input
+  // Recursively calling for left and right 
+
   const leftEncoding = shannonFano(leftArray.map((item) => item.char).join(""));
-  const rightEncoding = shannonFano(
-    rightArray.map((item) => item.char).join("")
+  const rightEncoding = shannonFano(rightArray.map((item) => item.char).join("")
   );
 
-  // Prepend '0' to the left half's codes and '1' to the right half's codes
+  
   leftEncoding.forEach((item) => (item.code = "0" + item.code));
   rightEncoding.forEach((item) => (item.code = "1" + item.code));
 

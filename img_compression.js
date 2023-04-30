@@ -15,6 +15,7 @@ function display(e) {
     }
 
     // Calculate frequency of each character in the image
+
     calculateFrequency(imageData) {
       const pixels = imageData.data;
 
@@ -33,6 +34,7 @@ function display(e) {
     }
 
     // Build Huffman tree
+    
     buildTree() {
       const nodes = [];
 
@@ -91,7 +93,9 @@ function display(e) {
     }
   }
 
-  // Usage Example
+
+// starting 
+
   const canvas = document.createElement("canvas");
   const ctx = canvas.getContext("2d");
   const img = new Image();
@@ -111,8 +115,8 @@ function display(e) {
     // console.log("code",compressedPixels);
     // console.log("Compression Ratio:", imageData.data.length / compressedPixels.length);
 
-    console.log(imageData.data);
-    console.log(compressedPixels);
+    // console.log(imageData.data);
+    // console.log(compressedPixels);
 
     let save = imageData.data.length - compressedPixels.length;
     document.getElementById("string2").innerHTML =

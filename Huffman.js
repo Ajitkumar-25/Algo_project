@@ -1,4 +1,4 @@
-class HuffmanNode {
+class Node {
   constructor() {
     this.data = 0;
     this.c = "";
@@ -19,13 +19,15 @@ function charFrequency(string) {
       freq[character] = 1;
     }
   }
+
+
   for (var i = 0; i < string.length; i++) {
     console.log(freq[string[i]]);
   }
 
   return freq;
 }
-function printCode(root, s) {
+function print(root, s) {
   if (root.left == null && root.right == null) {
     console.log(root.c + ":" + s + "<br>");
     fmap[root.c] = s;
@@ -33,8 +35,8 @@ function printCode(root, s) {
     document.getElementById("string3").innerHTML += `${root.c} : ${s} \n`;
     return;
   }
-  printCode(root.left, s + "0");
-  printCode(root.right, s + "1");
+  print(root.left, s + "0");
+  print(root.right, s + "1");
 }
 
 function display(e) {
@@ -45,22 +47,19 @@ function display(e) {
   var x = input;
   x = Array.from(new Set(x.split(""))).toString();
   console.log(x);
-  sss = input;
+   let sss = input;
   input = "";
-  for (var i = 0; i < x.length; i++) if (x[i] != ",") input += x[i];
+  for (var i = 0; i < x.length; i++) 
+  if (x[i] != ",") input += x[i];
   console.log(input);
   n = input.length;
   
 
   for (let i = 0; i < n; i++) {
-    let hn = new HuffmanNode();
+    let hn = new Node();
 
     hn.c = input[i];
     hn.data = freqarr[input[i]];
-
-    hn.left = null;
-    hn.right = null;
-
     q.push(hn);
   }
 
@@ -74,7 +73,7 @@ function display(e) {
     q.shift();
     let y = q[0];
     q.shift();
-    let f = new HuffmanNode();
+    let f = new Node();
     f.data = x.data + y.data;
     f.c = "-";
     f.left = x;
@@ -85,7 +84,7 @@ function display(e) {
       return a.data - b.data;
     });
   }
-  printCode(root, "");
+  print(root, "");
   let ans = 0;
   for (var j = 0; j < sss.length; j++) {
     document.getElementById("string2").innerHTML += fmap[sss[j]];
@@ -98,7 +97,8 @@ function display(e) {
     }\n`;
   }
   //code in 5th block
-   let len=input.length*8;
+  
+   let len=sss.length*8;
    let save=len-ans;
   document.getElementById("string5").innerHTML = 
     "Total space consumed before encoding : "+ len+" bits\n\n"
@@ -114,6 +114,7 @@ function copy(e) {
   var copyText = document.getElementById("string2");
 
   // Select the text field
+  
   copyText.select();
   copyText.setSelectionRange(0, 99999); // For mobile devices
 
