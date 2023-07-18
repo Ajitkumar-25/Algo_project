@@ -30,3 +30,41 @@ Shannon Fano Algorithm is an entropy encoding technique for lossless data compre
 | 21103315  | Monic Vyas  |
 | 21103211  | Ashmeet Kaur  |
 | 21103294  | juhi sharma  |
+
+# facebook-login-clone-using-Tailwindcss
+
+
+
+
+# Tech used 
+```
+- HTML5
+- CSS3
+- JAVASCRIPT
+```
+
+# Sample Image of Project
+
+![Screenshot_20230430_232343](https://github.com/Ajitkumar-25/Algo_project/assets/98700726/5186a7e7-aaa7-472c-b3b6-4becadd1b046)
+
+
+
+![Screenshot_20230430_232319](https://github.com/Ajitkumar-25/Algo_project/assets/98700726/cb8c3962-8ea1-4422-babd-376f51eabc31)
+
+
+![Screenshot (107)](https://github.com/Ajitkumar-25/Algo_project/assets/98700726/13c08b98-ba23-47b7-bd18-a9f753032bfa)
+
+
+## Run Locally
+Clone the project
+
+
+```bash
+  git clone https://link-to-project
+```
+
+
+```bash
+  open the html file using live server
+```
+
